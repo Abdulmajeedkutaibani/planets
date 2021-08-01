@@ -5,6 +5,7 @@
 body {
   background: $darkBlue;
   color: $white;
+  background-image: url(../components/assets/background-stars.svg);
 }
 
 h1 {
@@ -86,4 +87,34 @@ p {
     font-size: 8px;
     line-height: 16px;
   }
+}
+
+// @mixin flex {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+button {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 48px;
+  background: $darkBlue;
+  color: $white;
+  border: solid 1px $gray;
+  cursor: pointer;
+
+  &:hover {
+    background: $gray;
+    border: none;
+  }
+  .btn__number {
+    padding: 0 28px;
+    opacity: 0.5;
+  }
+}
+
+img {
+  width: 100px;
+  height: 100px;
 }
