@@ -1,5 +1,90 @@
-$myColor: lightgreen;
+@import './resets';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Spartan:wght@400;700&display=swap');
 
 body {
-  background: $myColor;
+  background: $darkBlue;
+  color: $white;
+  font-family: $spartanFont;
+}
+
+h1 {
+  font-family: $antonioFont;
+  font-size: 80px;
+  line-height: 103px;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: $antonioFont;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: $spartanFont;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+h4 {
+  font-family: $spartanFont;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $spartanFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.9px;
+  }
+  h3 {
+    font-size: 9px;
+  }
+  h4 {
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.73px;
+  }
+  p {
+    font-size: 11px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.75px;
+  }
+  h3 {
+    line-height: 10px;
+  }
+  h4 {
+    font-size: 8px;
+    line-height: 16px;
+  }
 }
