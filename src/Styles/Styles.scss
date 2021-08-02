@@ -110,7 +110,7 @@ p {
 button {
   display: flex;
   align-items: center;
-  width: 350px;
+  width: 100%;
   height: 48px;
   background: $darkBlue;
   color: $white;
@@ -176,7 +176,7 @@ nav {
   .image-container {
     width: 50%;
   }
-  .planet-info {
+  .planet {
     width: 30%;
 
     .planet-description {
@@ -209,6 +209,58 @@ nav {
 
     h4 {
       opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 160px;
+    margin-bottom: 2rem;
+  }
+  .content {
+    width: 90%;
+  }
+  .hero-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 65vh;
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 50%;
+    }
+    .planet {
+      width: 100%;
+      display: flex;
+      gap: 10%;
+    }
+
+    .planet-info {
+      width: 40%;
+    }
+    .info-btns {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+
+      button {
+        height: 40px;
+      }
+    }
+  }
+  .featured-info {
+    margin-bottom: 3rem;
+    .info-item {
+      height: 88px;
     }
   }
 }
