@@ -1,11 +1,15 @@
-import Button from './components/Button';
-import mars from './components/assets/planet-mars-internal.svg';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import FeaturedInfo from './components/FeaturedInfo';
 function App() {
   return (
     <div className='App'>
       <div className='container'>
-        <img src={mars} alt='' />
-        <Button />
+        <Navbar />
+        <div className='content'>
+          <Hero />
+          <FeaturedInfo />
+        </div>
       </div>
     </div>
   );
