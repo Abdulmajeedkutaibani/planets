@@ -264,3 +264,76 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: row;
+    height: 68px;
+    position: relative;
+    margin: 0;
+
+    ul {
+      display: none;
+    }
+  }
+  .content {
+    position: relative;
+
+    .hero-container {
+      justify-content: space-between;
+      height: 70vh;
+      padding-top: 20%;
+
+      .image-container {
+        width: 100%;
+      }
+      .planet {
+        flex-direction: column-reverse;
+
+        .planet-info {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .info-btns {
+      position: absolute;
+      width: 100%;
+      flex-direction: row;
+      top: 0;
+      gap: 0;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+      button {
+        width: 30%;
+        height: 50px;
+        border: none;
+        justify-content: center;
+
+        .btn__number {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .featured-info {
+    margin-bottom: 3rem;
+    flex-direction: column;
+    gap: 8px;
+
+    .info-item {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      width: 100%;
+      padding: 0 24px;
+    }
+  }
+}

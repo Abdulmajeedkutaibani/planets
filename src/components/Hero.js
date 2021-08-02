@@ -20,9 +20,9 @@ const Hero = () => {
           <p className='source'>Source : Wikipedia</p>
         </div>
         <div className='info-btns'>
-          <Button />
-          <Button />
-          <Button />
+          <Button btnText='overview' />
+          <Button btnText='structure' />
+          <Button btnText='surface' />
         </div>
       </div>
     </div>
