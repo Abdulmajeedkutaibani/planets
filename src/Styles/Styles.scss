@@ -2,6 +2,11 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Spartan:wght@400;700&display=swap');
 
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body {
   background: $darkBlue;
   color: $white;
@@ -145,6 +150,13 @@ nav {
     line-height: 85px;
     letter-spacing: -1.05px;
   }
+
+  .menu-btn {
+    display: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
   a {
     text-decoration: none;
     color: $white;
@@ -274,9 +286,70 @@ nav {
     height: 68px;
     position: relative;
     margin: 0;
-
+    .menu-btn {
+      @include flexCenter();
+    }
     ul {
-      display: none;
+      position: absolute;
+      flex-direction: column;
+      height: 100vh;
+      top: 8vh;
+      width: 100%;
+      left: 0;
+      background: $darkBlue;
+      z-index: 2;
+      padding: 44px 24px;
+
+      li {
+        width: 100%;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .planet-icon {
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+        }
+        .mercury {
+          background: $lightBlue;
+        }
+        .venus {
+          background: $darkYellow;
+        }
+        .earth {
+          background: $purple;
+        }
+        .mars {
+          background: $orange;
+        }
+        .jupiter {
+          background: #ecad7a;
+        }
+        .saturn {
+          background: #fccb6b;
+        }
+        .uranus {
+          background: $turkuaz;
+        }
+        .neptune {
+          background: $blue;
+        }
+        h4 {
+          font-size: 15px;
+          line-height: 25px;
+          padding-left: 25px;
+        }
+
+        img {
+          width: 4px;
+          height: 8px;
+
+          margin-left: auto;
+        }
+      }
     }
   }
   .content {
