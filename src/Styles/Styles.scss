@@ -173,6 +173,10 @@ nav {
     h4:hover {
       opacity: 1;
     }
+
+    img {
+      display: none;
+    }
   }
 }
 
@@ -187,6 +191,7 @@ nav {
 
   .image-container {
     width: 50%;
+    @include flexCenter();
   }
   .planet {
     width: 30%;
@@ -294,11 +299,14 @@ nav {
       flex-direction: column;
       height: 100vh;
       top: 8vh;
-      width: 100%;
-      left: 0;
+      width: 0;
+      right: 0;
       background: $darkBlue;
       z-index: 2;
       padding: 44px 24px;
+      transition: all 0.5s;
+      overflow: hidden;
+      visibility: hidden;
 
       li {
         width: 100%;
@@ -346,8 +354,8 @@ nav {
         img {
           width: 4px;
           height: 8px;
-
           margin-left: auto;
+          display: block;
         }
       }
     }
