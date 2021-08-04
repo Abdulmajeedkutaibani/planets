@@ -9,7 +9,6 @@ function App() {
         <Navbar />
         <div className='content'>
           <Hero />
-          <FeaturedInfo />
         </div>
       </div>
     </div>

@@ -34,26 +34,46 @@ const Hero = () => {
   }
 
   return (
-    <div className='hero-container'>
-      <div className='image-container'>
-        <img src={planetImage} alt='' />
-      </div>
+    <>
+      <div className='hero-container'>
+        <div className='image-container'>
+          <img src={planetImage} alt='' />
+        </div>
 
-      <div className='planet'>
-        <div className='planet-info'>
-          <h1>{planets[planet].name}</h1>
-          <p className='planet-description'>
-            {planets[planet].overview.content}
-          </p>
-          <p className='source'>{planets[planet].overview.source}</p>
-        </div>
-        <div className='info-btns'>
-          <Button btnText='overview' />
-          <Button btnText='structure' />
-          <Button btnText='surface' />
+        <div className='planet'>
+          <div className='planet-info'>
+            <h1>{planets[planet].name}</h1>
+            <p className='planet-description'>
+              {planets[planet].overview.content}
+            </p>
+            <p className='source'>{planets[planet].overview.source}</p>
+          </div>
+          <div className='info-btns'>
+            <Button btnText='overview' />
+            <Button btnText='structure' />
+            <Button btnText='surface' />
+          </div>
         </div>
       </div>
-    </div>
+      <div className='featured-info'>
+        <div className='info-item'>
+          <h4> rotation time</h4>
+          <h2>{planets[planet].rotation}</h2>
+        </div>
+        <div className='info-item'>
+          <h4>revolution time</h4>
+          <h2>{planets[planet].revolution}</h2>
+        </div>
+        <div className='info-item'>
+          <h4>radius</h4>
+          <h2>{planets[planet].radius}</h2>
+        </div>
+        <div className='info-item'>
+          <h4>average temp.</h4>
+          <h2>{planets[planet].temperature}</h2>
+        </div>
+      </div>
+    </>
   );
 };
 
