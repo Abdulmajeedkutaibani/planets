@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import FeaturedInfo from './components/FeaturedInfo';
 
 function App() {
   return (

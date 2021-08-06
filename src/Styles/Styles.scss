@@ -191,7 +191,19 @@ nav {
 
   .image-container {
     width: 50%;
+    position: relative;
     @include flexCenter();
+
+    .planet-internal {
+      position: absolute;
+      display: none;
+    }
+    .planet-geology {
+      position: absolute;
+      width: 30%;
+      top: 80%;
+      display: none;
+    }
   }
   .planet {
     width: 30%;

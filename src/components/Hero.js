@@ -2,10 +2,12 @@ import React from 'react';
 import Button from './Button';
 import { planets } from '../data';
 import { photos } from './assets/photos';
+
 const Hero = () => {
   const url = window.location.href;
   let planet = '';
   let planetImage = '';
+  let planetInternal = '';
 
   if (url.match('mercury')) {
     planet = 0;
@@ -32,12 +34,29 @@ const Hero = () => {
     planet = 7;
     planetImage = photos.neptune;
   }
-
+  const handleOverview = () => {
+    document.querySelector('.planet-internal').style.display = 'none';
+    document.querySelector('.planet-geology').style.display = 'none';
+  };
+  const handleStructure = () => {
+    document.querySelector('.planet-internal').style.display = 'block';
+    document.querySelector('.planet-geology').style.display = 'none';
+  };
+  const handleSurface = () => {
+    document.querySelector('.planet-internal').style.display = 'none';
+    document.querySelector('.planet-geology').style.display = 'block';
+  };
   return (
     <>
       <div className='hero-container'>
         <div className='image-container'>
-          <img src={planetImage} alt='' />
+          <img src={planetImage} alt='' className='planet-image' />
+          <img
+            src={photos.mercuryInternal}
+            alt=''
+            className='planet-internal'
+          />
+          <img src={photos.mercuryGeology} alt='' className='planet-geology' />
         </div>
 
         <div className='planet'>
@@ -49,9 +68,9 @@ const Hero = () => {
             <p className='source'>{planets[planet].overview.source}</p>
           </div>
           <div className='info-btns'>
-            <Button btnText='overview' />
-            <Button btnText='structure' />
-            <Button btnText='surface' />
+            <Button btnText='overview' onClick={handleOverview} />
+            <Button btnText='structure' onClick={handleStructure} />
+            <Button btnText='surface' onClick={handleSurface} />
           </div>
         </div>
       </div>
