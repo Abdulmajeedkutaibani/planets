@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import { planets } from '../data';
 import { photos } from './assets/photos';
@@ -8,55 +8,77 @@ const Hero = () => {
   let planet = '';
   let planetImage = '';
   let planetInternal = '';
+  let planetGeology = '';
 
-  if (url.match('mercury')) {
-    planet = 0;
-    planetImage = photos.mercury;
-  } else if (url.match('venus')) {
+  if (url.match('venus')) {
     planet = 1;
     planetImage = photos.venus;
+    planetInternal = photos.venusInternal;
+    planetGeology = photos.venusGeology;
   } else if (url.match('earth')) {
     planet = 2;
     planetImage = photos.earth;
+    planetInternal = photos.earthInternal;
+    planetGeology = photos.earthGeology;
   } else if (url.match('mars')) {
     planet = 3;
     planetImage = photos.mars;
+    planetInternal = photos.marsInternal;
+    planetGeology = photos.marsGeology;
   } else if (url.match('jupiter')) {
     planet = 4;
     planetImage = photos.jupiter;
+    planetInternal = photos.jupiterInternal;
+    planetGeology = photos.jupiterGeology;
   } else if (url.match('saturn')) {
     planet = 5;
     planetImage = photos.saturn;
+    planetInternal = photos.saturnInternal;
+    planetGeology = photos.saturnGeology;
   } else if (url.match('uranus')) {
     planet = 6;
     planetImage = photos.uranus;
+    planetInternal = photos.uranusInternal;
+    planetGeology = photos.uranusGeology;
   } else if (url.match('neptune')) {
     planet = 7;
     planetImage = photos.neptune;
+    planetInternal = photos.neptuneInternal;
+    planetGeology = photos.neptuneGeology;
+  } else {
+    {
+      planet = 0;
+      planetImage = photos.mercury;
+      planetInternal = photos.mercuryInternal;
+      planetGeology = photos.mercuryGeology;
+    }
   }
+
   const handleOverview = () => {
     document.querySelector('.planet-internal').style.display = 'none';
     document.querySelector('.planet-geology').style.display = 'none';
+    document.querySelector('.planet-description').innerHTML =
+      planets[planet].overview.content;
   };
   const handleStructure = () => {
     document.querySelector('.planet-internal').style.display = 'block';
     document.querySelector('.planet-geology').style.display = 'none';
+    document.querySelector('.planet-description').innerHTML =
+      planets[planet].structure.content;
   };
   const handleSurface = () => {
     document.querySelector('.planet-internal').style.display = 'none';
     document.querySelector('.planet-geology').style.display = 'block';
+    document.querySelector('.planet-description').innerHTML =
+      planets[planet].geology.content;
   };
   return (
     <>
       <div className='hero-container'>
         <div className='image-container'>
           <img src={planetImage} alt='' className='planet-image' />
-          <img
-            src={photos.mercuryInternal}
-            alt=''
-            className='planet-internal'
-          />
-          <img src={photos.mercuryGeology} alt='' className='planet-geology' />
+          <img src={planetInternal} alt='' className='planet-internal' />
+          <img src={planetGeology} alt='' className='planet-geology' />
         </div>
 
         <div className='planet'>

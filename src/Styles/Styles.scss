@@ -201,7 +201,8 @@ nav {
     .planet-geology {
       position: absolute;
       width: 30%;
-      top: 80%;
+      max-width: 160px;
+      top: 70%;
       display: none;
     }
   }
