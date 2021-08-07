@@ -90,9 +90,13 @@ const Hero = () => {
             <p className='source'>{planets[planet].overview.source}</p>
           </div>
           <div className='info-btns'>
-            <Button btnText='overview' onClick={handleOverview} />
-            <Button btnText='structure' onClick={handleStructure} />
-            <Button btnText='surface' onClick={handleSurface} />
+            <Button btnText='overview' onClick={handleOverview} btnNumber='1' />
+            <Button
+              btnText='structure'
+              onClick={handleStructure}
+              btnNumber='2'
+            />
+            <Button btnText='surface' onClick={handleSurface} btnNumber='3' />
           </div>
         </div>
       </div>

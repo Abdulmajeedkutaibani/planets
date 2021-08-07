@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import hamburger from './assets/icon-hamburger.svg';
 import chevron from './assets/icon-chevron.svg';
 
 const Navbar = () => {
-  const [planet, setPlanet] = useState();
-
   const handleClick = () => {
     const menuBtn = document.querySelector('.menu-btn');
     const navList = document.querySelector('.navList');
