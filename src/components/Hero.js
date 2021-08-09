@@ -87,7 +87,12 @@ const Hero = () => {
             <p className='planet-description'>
               {planets[planet].overview.content}
             </p>
-            <p className='source'>{planets[planet].overview.source}</p>
+            <div className='source'>
+              <p>
+                Source : <a href={planets[planet].overview.source}>Wikipedia</a>
+              </p>
+              <img src={photos.sourceIcon} alt='' />
+            </div>
           </div>
           <div className='info-btns'>
             <Button btnText='overview' onClick={handleOverview} btnNumber='1' />

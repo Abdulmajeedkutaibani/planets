@@ -22,6 +22,7 @@ import uranusGeology from './geology-uranus.png';
 import neptune from './planet-neptune.svg';
 import neptuneInternal from './planet-neptune-internal.svg';
 import neptuneGeology from './geology-neptune.png';
+import sourceIcon from './icon-source.svg';
 
 export const photos = {
   mercury,
@@ -48,4 +49,5 @@ export const photos = {
   neptune,
   neptuneInternal,
   neptuneGeology,
+  sourceIcon,
 };

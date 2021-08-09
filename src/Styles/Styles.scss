@@ -7,6 +7,30 @@
   justify-content: center;
   align-items: center;
 }
+.mercury {
+  background: $lightBlue;
+}
+.venus {
+  background: $darkYellow;
+}
+.earth {
+  background: $purple;
+}
+.mars {
+  background: $orange;
+}
+.jupiter {
+  background: #ecad7a;
+}
+.saturn {
+  background: #fccb6b;
+}
+.uranus {
+  background: $turkuaz;
+}
+.neptune {
+  background: $blue;
+}
 body {
   background: $darkBlue;
   color: $white;
@@ -227,6 +251,27 @@ nav {
 
     .source {
       margin-bottom: 40px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      &:hover {
+        p {
+          opacity: 1;
+        }
+      }
+      p {
+        opacity: 0.5;
+
+        a {
+          color: $white;
+          font-weight: bold;
+        }
+      }
+      img {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
   button {
@@ -274,6 +319,9 @@ nav {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .info-btns {
+      width: 50%;
     }
     img {
       width: 50%;
@@ -339,30 +387,7 @@ nav {
           width: 20px;
           border-radius: 50%;
         }
-        .mercury {
-          background: $lightBlue;
-        }
-        .venus {
-          background: $darkYellow;
-        }
-        .earth {
-          background: $purple;
-        }
-        .mars {
-          background: $orange;
-        }
-        .jupiter {
-          background: #ecad7a;
-        }
-        .saturn {
-          background: #fccb6b;
-        }
-        .uranus {
-          background: $turkuaz;
-        }
-        .neptune {
-          background: $blue;
-        }
+
         h4 {
           font-size: 15px;
           line-height: 25px;
@@ -395,6 +420,9 @@ nav {
         .planet-info {
           width: 100%;
           text-align: center;
+        }
+        .source {
+          justify-content: center;
         }
       }
 
